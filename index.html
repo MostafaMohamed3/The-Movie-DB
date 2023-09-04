@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie DB</title>
+    <link rel="shortcut icon" href="images/the_movie_database_logo_icon_144804.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+    <div class="loading bg-black position-fixed top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+          </div>
+    </div>
+    <header id="navbar" class="d-flex">
+        <div id="navMneu" class="nav-menu vh-100 bg-black text-white fw-lighter d-flex flex-column justify-content-between">
+            <div class="nav-menu-header">
+                <ul class="list-unstyled my-3">
+                    <li class="ps-4 py-2">
+                        <a id="now_playing" href="#">Now playing</a>
+                    </li>
+                    <li class="ps-4 py-2">
+                        <a id="popular" href="#">Popular</a>
+                    </li>
+                    <li class="ps-4 py-2">
+                        <a id="top_rated" href="#">Top Rated</a>
+                    </li>
+                    <li class="ps-4 py-2">
+                        <a id="trending" href="#">Trending</a>
+                    </li>
+                    <li class="ps-4 py-2">
+                        <a id="upcoming" href="#">Upcoming</a>
+                    </li>
+                    <li class="ps-4 py-2">
+                        <a id="" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div><!-- /nav-menu-header -->
+            <div class="nav-menu-footer px-4">
+                <div class="nav-social-icon d-flex justify-content-evenly py-2">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                </div>
+                <div class="copyright">
+                    <p class="text-muted my-0">Created By Mostafa</p>
+                    <p class="text-muted my-0">Mohamed | All Rights</p>
+                    <p class="text-muted">Reserved</p>
+                </div>
+            </div><!-- /nav-menu-footer -->
+        </div><!-- /navMneu -->
+        <nav class="navbar navbar-light bg-light vh-100 d-flex flex-column">
+            <a class="text-black" href="#"><i class="fa-brands fa-mdb fa-2x"></i></a>
+            <button id="navToggle" class="text-black h2 border-0 bg-transparent" href="#"><i class="fa-solid fa-align-justify"></i></button>
+            <div class="nav-social-icon d-flex flex-column">
+                <a class="nav-link text-black h5" href="#"><i class="fa-solid fa-globe"></i></a>
+                <a class="nav-link text-black h5" href="#"><i class="fa-solid fa-share-alt"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- /navbar -->
+    <div class="site-body d-flex">
+        <div class="nothing">
+            <a class="nav-link h5" href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <div class="container py-5">
+            <div class="search-inputs inputs row my-3 px-2">
+                <div class="col-md-6">
+                    <input id="searchMovie" class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="get movies by word...">
+                </div>
+                <div class="col-md-6">
+                    <input id="searchCurrantMovie" oninput="searchMovies(this.value)" class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="search...">
+                </div>
+            </div>
+            <div class="currantMovieContainer my-3">
+                <div id="currantMovieContainer" class="row gy-4 my-3"></div>
+                <div class="h-line w-100 bg-light m-auto rounded-pill my-4 d-none"></div>
+            </div> <!-- /currantMovieContainer -->
+            <div id="movieContainer" class="row gy-4">
+            </div> <!-- /movieContainer -->
+            <div id="contact" class="text-white py-4">
+                <h3>Contact Us...</h3>
+                <div class="contact-inputs inputs row my-3 px-2">
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Phone">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Age">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Password">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="w-100 bg-transparent border-0 border-bottom text-center text-white my-3" type="text" placeholder="Enter Repassword">
+                    </div>
+                </div><!-- /contact-inputs -->
+                <button class="btn btn-outline-danger">Submit</button>
+            </div><!-- /contact -->
+        </div><!-- /container -->
+    </div><!-- /site-body -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
